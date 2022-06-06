@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spots",
+  "info": {
+    "singularName": "spot",
+    "pluralName": "spots",
+    "displayName": "spot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lat": {
+      "type": "float",
+      "required": true
+    },
+    "lon": {
+      "type": "float",
+      "required": true
+    },
+    "access": {
+      "type": "richtext",
+      "required": true
+    },
+    "body": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 60
+    },
+    "conseil": {
+      "type": "richtext"
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "enumeration",
+      "enum": [
+        "Ville",
+        "Paysage",
+        "Océan",
+        "Forêt"
+      ],
+      "required": true
+    },
+    "moment": {
+      "type": "enumeration",
+      "enum": [
+        "Lever de soleil",
+        "Coucher de soleil",
+        "Toute la journée"
+      ],
+      "required": true
+    },
+    "saison": {
+      "type": "enumeration",
+      "enum": [
+        "Toutes saisons",
+        "Printemps",
+        "Eté",
+        "Automne",
+        "Hiver"
+      ],
+      "default": "Toutes saisons",
+      "required": true
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "spot"
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
