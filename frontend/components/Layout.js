@@ -3,6 +3,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Navbar from "./ClientNav";
 
 import { Container, Nav, NavItem } from "reactstrap";
 
@@ -20,7 +21,7 @@ export default function Layout(props) {
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossOrigin="anonymous"
         />
-        <script src="https://js.stripe.com/v3" />
+
       </Head>
       <header>
         <style jsx>
@@ -50,6 +51,7 @@ export default function Layout(props) {
           </NavItem>
         </Nav>
       </header>
+    <Navbar />
       <div className="container">{props.children}</div>
     </div>
   );

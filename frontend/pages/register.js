@@ -1,5 +1,10 @@
 /* pages/register.js */
+import SignUp from "../components/authentication/Signup";
 
-export default () => {
-    return <h1>Sign Up</h1>;
+const Register = () => {
+    return (
+      <SignUp />
+    );
   };
+
+  export default Register
