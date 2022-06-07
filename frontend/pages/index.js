@@ -5,6 +5,7 @@ import axios from "axios";
 import Image from "next/image";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import AboutHome from "../components/home/AboutHome";
+import VideoHome from "../components/home/VideoHome";
 
 const { API_URL } = process.env;
 export const getStaticProps = async () => {
@@ -21,7 +22,8 @@ export const getStaticProps = async () => {
 export default function LastPostFetch({ dataApi }) {
   return (
     <>
-      <div className="grid grid-cols-3 gap-4 py-8">
+      <VideoHome />
+      <div className="grid grid-cols-3 gap-4 py-8 container">
         {dataApi?.map((dataSpot) => (
           <div key={dataSpot.id} className="rounded overflow-hidden shadow-lg">
             <div>
@@ -57,7 +59,9 @@ export default function LastPostFetch({ dataApi }) {
           </div>
         ))}
       </div>
+      <div className="container">
       <AboutHome />
+      </div>
     </>
   );
 }

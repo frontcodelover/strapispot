@@ -52,7 +52,7 @@ export default function Layout(props) {
         </Nav>
       </header>
     <Navbar />
-      <div className="container">{props.children}</div>
+      <>{props.children}</>
     </div>
   );
 }
