@@ -88,6 +88,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "seo_details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
     }
   }
 }
