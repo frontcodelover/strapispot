@@ -4,5 +4,6 @@ import axios from 'axios'
 function getParsedDatasFromSpotsAPI(data) {
   return {
     id : data.id
-  }}
+  }
+}
   
