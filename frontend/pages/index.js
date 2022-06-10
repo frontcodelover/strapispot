@@ -7,6 +7,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import AboutHome from "../components/home/AboutHome";
 import VideoHome from "../components/home/VideoHome";
 
+
 const { API_URL } = process.env;
 export const getStaticProps = async () => {
   const { data } = await axios.get(
@@ -61,6 +62,7 @@ export default function LastPostFetch({ dataApi }) {
       </div>
       <div className="container">
       <AboutHome />
+
       </div>
     </>
   );
