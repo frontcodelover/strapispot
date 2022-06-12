@@ -5,9 +5,11 @@ const nextConfig = {
   env: {
     API_URL: process.env.API_URL,
     IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
+    OPEN_WEATHER_API_KEY: process.env.OPEN_WEATHER_API_KEY,
   },
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,
+    OPEN_WEATHER_API_KEY: process.env.OPEN_WEATHER_API_KEY,
     IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
   },
   images: {

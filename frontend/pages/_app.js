@@ -32,7 +32,7 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps, data } = this.props;
-    console.log(data);
+
 
     return (
       <>
